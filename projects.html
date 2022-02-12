@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/mainstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/projectsstyle.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d0a99693b0.js" crossorigin="anonymous"></script>
+        <title>My projects</title>
+</head>
+
+<body onload="setUpColors()">
+    <nav class="menu">
+        <div>
+            <img class="logo" src="resources/logo.png" />
+            <a class="logoname" href="index.html">Matej Jakopec</a>
+        </div>
+        <ul id="list-menu" value="yes">
+            <li><a class="button" href="index.html">Home</a></li>
+            <li><a class="button" href="projects.html">My Projects</a></li>
+            <li><a class="button" href="aboutme.html">About Me</a></li>
+            <li><a class="button" href="contact.html">Contact</a></li>
+            <li><a class="button" id="switch-mode" href="#" onclick="changeLightDark()">Switch to dark mode</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="menuClickListener()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <section class="projects-portfolio">
+            <div class="project">
+                <div class="project-image-container images1">
+                    <div class="image1"></div>
+                    <div class="image2"></div>
+                    <div class="image3"></div>
+                </div>
+                <div class="project-text-container">
+                    <p class="project-title">
+                        Let's Watch
+                    </p>
+                    <p class="project-subtitle">
+                        Native Android App developed in Kotlin
+                    </p>
+                    <p class="project-explanation">
+                     This app was nativly written in Kotlin as a project for my uni. It's main purpose is to connect two users and suggest them movies. They decide if the like the movie, don't like or if they have watched. If both users liked the same movie it add that movie on a to watch list. Once the have watch it they can remove it. As a database it uses Firebase and all of it's capabilities. This project sadly doesn't use MVVM architecture because it is more of an playground for testing android development and also because it was an oversight that wasn't noticed until later into the project
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image-container">
+                    <div class="project-image-container images2">
+                        <div class="image21"></div>
+                        <div class="image22"></div>
+                    </div>
+                </div>
+                <div class="project-text-container">
+                    <p class="project-title">
+                        PID regulation of wooden stove
+                    </p>
+                    <p class="project-subtitle">
+                        Arduino - Hardware
+                    </p>
+                    <p class="project-explanation">
+                        Let's just say I got tired od old analog/mechanical way of controlling the airflow for the furnace on wood. So I decided to add PID regulation onto it. It has 2 analog PID regulators controlling air intake and exhaust. It was also coupled with a potentiometer for controlling and setting the temperature. That temperature is controled with thermocouples controlling water temperature inside the furnace, outgoing pipe and return pipe for the central heating system. With that I accomplished precise control over the temperature and prevented potential overheating which happened a few times with the old mechanical way of controlling the furnace. Also since the pipes for central heating are going aoutside for a short size, I added an outside temperature sensor which when it is bellow 3 °C activated the pump for a short duration even if the furnace isn't running so it removes the possibility of the water freezing inside the pipes.
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image-container">
+                    <img class="project-image" src="resources/nexysa7.png" alt="">
+                </div>
+                <div class="project-text-container">
+                    <p class="project-title">
+                        Temperature display
+                    </p>
+                    <p class="project-subtitle">
+                        VHDL - I2C communication
+                    </p>
+                    <p class="project-explanation">
+                        This project was done for the uni on one of theirs Nexys A7 boards. The main goal was to establish I2C communication with the onboard temperature sensor and request data. After that, the data was processed and the output was displayed on the onboard 7 segment displays. It was measuring with three decimal places with the resolution of 0.125°C. The whole programming was done in the VHDL hardware programming language which realy puts you into the hardware mindset and requires full concentration.
+                    </p>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <p>© Copyright by best programmer in my house - Matej Jakopec</p>
+        <p>All rights reserved</p>
+    </footer>
+    <script src="scripts/mainPageSetup.js"></script>
+</body>
+
+</html>

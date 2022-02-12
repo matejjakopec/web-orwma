@@ -1,0 +1,173 @@
+:root{
+    --contrast-clr: #2e2e2e;
+    --text-color: black;
+    --invert: 1;
+    --invert-icon: 0;
+    --background-color: white;
+    --gradient-begin-clr: #78e4ff;
+    --gradient-end-clr: #ff48fa;
+    --neutral-clr: rgb(238, 238, 238, 0.95);
+    --shadow-clr: rgba(0, 0, 0, 0.2);
+    --card-bg-clr: rgba(0, 0, 0, 0.05);
+    --card-hover-clr: rgba(0, 0, 0, 0.1);
+    --text-light-clr: rgba(0, 0, 0, 0.5);
+}
+body, html {
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color:var(--text-color);
+}
+.logoname{
+    font-size: clamp(2rem, 3vw, 5rem);
+    margin: auto 0 auto 0.5rem;
+    background: -webkit-linear-gradient(45deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logoname:hover{
+    text-decoration: underline;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    transition: 500ms;
+}
+.icon{
+    font-size: 2rem;
+    padding-left: 1rem;
+    display: block;
+    background: -webkit-linear-gradient(45deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    background: var(--neutral-clr);
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+}
+.logo{
+    filter: invert(var(--invert-icon));
+    height: clamp(2rem,3vw,4rem);
+    object-fit: cover;
+    margin: auto 0 auto 1rem;
+}
+.button {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 105vw;
+    color:var(--text-color);
+    font-size: clamp(1em, 0.7vw, 2em);
+    padding: .5rem 100% 0.5rem 1rem;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0),
+     rgba(255, 255, 255, 0)),
+      linear-gradient(101deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--background-color) inset;
+    text-decoration: none;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .button:hover {
+    box-shadow: none;
+    color: white;
+    transition: 300ms;
+  }
+
+  footer{
+    background-image: linear-gradient(101deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid var(--contrast-clr);
+}
+footer>p{
+    margin: 0.125em;
+    text-align: center;
+}
+
+@media (max-width: 60rem){
+    nav{
+        flex-direction: row-reverse;
+    }
+
+    .menu>ul{
+        display: none;
+        flex-direction: column;
+        align-content: flex-end;
+        position: fixed;
+        left: 50%;
+        top: 3.5%;
+        transform: translateX(-53%);
+    }
+    .menu>ul>li{
+        display: block;
+        width: 100vw;
+        margin: 0.6rem;
+        list-style-type: none;
+    }
+}
+
+
+
+
+@media(min-width: 60rem){
+    .menu>ul{
+        display: flex;
+        position: relative;
+        margin-right: 2rem;
+        margin-left: auto;
+        justify-content: space-between;
+    }
+    .menu>ul>li{
+        list-style-type:none;
+        padding-left: clamp(0.01em, 0.5vw, 1em);
+    }
+    .icon{
+        display: none;
+    }
+    .button {
+        overflow: hidden;
+        white-space: nowrap;
+        width: fit-content;
+        color:var(--text-color);
+        border-radius: 100rem;
+        font-size: clamp(1em, 0.7vw, 2em);
+        padding: .5rem clamp(0.1em, 1vw, 2em);
+        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+        border: solid 3px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),
+         rgba(255, 255, 255, 0)),
+          linear-gradient(101deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px var(--background-color) inset;
+      }
+      
+      .button:hover {
+        box-shadow: none;
+        color: white;
+        transition: 300ms;
+      }
+
+}

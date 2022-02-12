@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/mainstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/aboutmestyle.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <title>About me</title>
+</head>
+
+<body onload="setUpColors()">
+  <nav class="menu">
+    <div>
+      <img class="logo" src="resources/logo.png" />
+      <a class="logoname" href="index.html">Matej Jakopec</a>
+    </div>
+    <ul id="list-menu" value="yes">
+      <li><a class="button" href="index.html">Home</a></li>
+      <li><a class="button" href="projects.html">My Projects</a></li>
+      <li><a class="button" href="aboutme.html">About Me</a></li>
+      <li><a class="button" href="contact.html">Contact</a></li>
+      <li><a class="button" id="switch-mode" href="#" onclick="changeLightDark()">Switch to dark mode</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="menuClickListener()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <section class="main-content">
+    <img src="resources/headshot.png" alt="" class="headshot">
+    <div class="content">
+      <p class="title">
+          Matej Jakopec
+      </p>
+      <p class="description">Soo.... This is me. What to say about myself. Well, I am what you could call a huge geek. Why? Well firstly because I love anything that has to do with electronics, computers or programming. Currently, I am a student of FERIT and I am on my way of becomming a CS major. I really love doing projects, but sadly with uni, I don't have time for them as much as I would like to. Now, I said I like everything with electronics and programming and that a really huge field. Could that be a negativity? Of course, beacuse sometimes it is better to just stick with one thing and be great at it. Maybe one day I will do that, but whose to tell.</p>
+    </div>
+  </section>
+  <footer>
+    <p>© Copyright by best programmer in my house - Matej Jakopec</p>
+    <p>All rights reserved</p>
+  </footer>
+  <script src="scripts/mainPageSetup.js"></script>
+</body>
+
+</html>

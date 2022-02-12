@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/mainstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/contactstyle.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d0a99693b0.js" crossorigin="anonymous"></script>
+        <title>Contact</title>
+</head>
+
+<body onload="setUpColors()">
+    <nav class="menu">
+        <div>
+            <img class="logo" src="resources/logo.png" />
+            <a class="logoname" href="index.html">Matej Jakopec</a>
+        </div>
+        <ul id="list-menu" value="yes">
+            <li><a class="button" href="index.html">Home</a></li>
+            <li><a class="button" href="projects.html">My Projects</a></li>
+            <li><a class="button" href="aboutme.html">About Me</a></li>
+            <li><a class="button" href="contact.html">Contact</a></li>
+            <li><a class="button" id="switch-mode" href="#" onclick="changeLightDark()">Switch to dark mode</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="menuClickListener()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <section class="form-content">
+        <div class="contact-body">
+            <div class="contact-text-group">
+                <p class="contact-title">Contact me</p>
+                <p class="contact-explanation">Please feel free to contact me with this form. Just fill in the form and
+                    I will get back at you ASAP.</p>
+                <p>Also you can reach me at my email: <a id="email-mine" href="mailto: jakopecmatej44@gmail.com">jakopecmatej44@gmail.com</a></p>
+                <ul>
+                    <li><a href="www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/matejjakopec" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="www.google.com" target="_blank"><i class="fa-brands fa-google"></i></a></li>
+                </ul>
+            </div>
+            <form action="" >
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="John"><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="email@domail.com"><br>
+                <label for="massage">Your message:</label>
+                <textarea  rows="10" type="text" id="massage" name="massage" placeholder="Your message here..."></textarea><br><br>
+                <input type="submit" value="Submit" id="submit-button">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>© Copyright by best programmer in my house - Matej Jakopec</p>
+        <p>All rights reserved</p>
+    </footer>
+    <script src="scripts/mainPageSetup.js"></script>
+</body>
+
+</html>

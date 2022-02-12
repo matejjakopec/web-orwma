@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/mainstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/indexstyle.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <title>Welcome to my page</title>
+</head>
+
+<body onload="setUpColors()">
+  <nav class="menu">
+    <div>
+      <img class="logo" src="resources/logo.png" />
+      <a class="logoname" href="#">Matej Jakopec</a>
+    </div>
+    <ul id="list-menu" value="yes">
+      <li><a class="button" href="#">Home</a></li>
+      <li><a class="button" href="projects.html">My Projects</a></li>
+      <li><a class="button" href="aboutme.html">About Me</a></li>
+      <li><a class="button" href="contact.html">Contact</a></li>
+      <li><a class="button" id="switch-mode" href="#" onclick="changeLightDark()">Switch to dark mode</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="menuClickListener()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <section class="banner">
+    <h1 class="banner-text">Welcome to page all about me</h1>
+    <h3 class="banner-text">If it's a machine and I can tell it what to do - It shall do as I say</h3>
+  </section>
+  <section class="cards-section">
+    <p class="project-title">This are some of mine projects</p>
+    <div class="project-cards">
+      <div class="card">
+        <img src="resources/logo-letsWatch.png" alt="">
+        <div class="card-content">
+          <h3 class="card-title">Let's Watch</h3>
+          <p class="card-subtitle">Native Android - Kotlin</p>
+          <p class="card-description">The idea of this app is to make the activity of what to watch with someone a lot simpler. It uses API with tousands of movies and suggests them to you and if both of you like that movie, if promotes it to you (something like Tinder, but for movies).</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="resources/arduino.png" alt="">
+        <div class="card-content">
+          <h3 class="card-title">PID regulation of furnace on wood</h3>
+          <p class="card-subtitle">Arduino - Hardware</p>
+          <p class="card-description">Simply put I was fed up with mechanical "control" on the current furnace and decided to add PID regulation with motors on input and exhaust of the furnace</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="resources/nexysa7.png" alt="">
+        <div class="card-content">
+          <h3 class="card-title">Temperature display</h3>
+          <p class="card-subtitle">VHDL - I2C communication</p>
+          <p class="card-description">Project that focused on more hardware level. Uses I2C communication with the onboard temperature chip and displays the temperature on 7 segment display</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quote">
+    <div class="quote-body">
+      <p class="quote-title">Random words of wisdom</p>
+      <p id="quote-txt" class="quote-text">First we thought the PC was a calculator. Then we found out how to turn numbers into letters
+        with ASCII — and we thought it was a typewriter. Then we discovered graphics, and we thought it was a
+        television. With the World Wide Web, we've realized it's a brochure.</p>
+      <p class="quote-author" id="quote-auth">Author: Douglas Adams</p>
+    </div>
+  </section>
+  <footer>
+    <p>© Copyright by best programmer in my house - Matej Jakopec</p>
+    <p>All rights reserved</p>
+  </footer>
+  <script src="scripts/mainPageSetup.js"></script>
+  <script src="scripts/getRandomQuoteIndex.js" onload="getRandomQuote()"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+section{
+    background-image: url(../resources/backgroundprojects.jpg);
+    background-repeat: repeat-y;
+    filter: invert(var(--invert-icon));
+    background-position: center center;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.project{
+    margin: 1rem 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--neutral-clr);
+    filter: invert(var(--invert-icon));
+}
+
+.project:nth-child(even){
+    flex-direction: row-reverse;
+}
+.project:nth-child(even)>div{
+    text-align: right;
+}
+
+.project-title, .project-subtitle{
+    background: -webkit-linear-gradient(45deg, var(--gradient-begin-clr), var(--gradient-end-clr));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.project-image-container{
+    width: 40%;
+    padding: 5% 10%;
+}
+
+.project-image{
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.project-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    width: 40%;
+}
+
+.project-subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-title{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.images1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    height: 80vh;
+    width: 35%;
+    padding: 2% 0% 2% 10%;
+}
+
+.image1{
+    background-image: url(../resources/logo-letsWatch.png);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+.image1:hover,.image2:hover,.image3:hover,.image21:hover,.image22:hover,.project-image:hover{
+    transform: scale(1.1);
+    transition: 500ms;
+    background-repeat: no-repeat;
+}
+.image2{
+    background-image: url(../resources/letswatch1.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/1;
+    grid-row: 2/4;
+}
+.image3{
+    background-image: url(../resources/letswatch2.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: 2/2;
+    grid-row: 2/4;
+}
+
+.images2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    height: 80vh;
+    width: 100%;
+    padding: 2% 10% 2% 0%;
+}
+
+.image21{
+    background-image: url(../resources/arduino.png);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+.image22{
+    background-image: url(../resources/arduino1.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+
+@media(max-width: 60rem){
+    .project{
+        flex-direction: column;
+    }
+    .images1{
+        padding: 2% 0;
+        width: 90%;
+    }
+    .images2{
+        padding: 2% 0;
+        width: 90%;
+    }
+    .project-image-container{
+        width: 90%;
+        padding: 2% 0;
+    }
+    .project-text-container{
+        width: 90%;
+        align-items: center;
+    }
+    .project:nth-child(even){
+        flex-direction: column;
+    }
+    .project:nth-child(even)>div{
+        text-align: center;
+    }
+    .project-image{
+        padding: 2% 0;
+    }
+}
